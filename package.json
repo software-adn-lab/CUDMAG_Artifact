@@ -7,10 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d dist -r https://github.com/JorgeSegovia98/Detection-Mapping-of-Antipatterns-DMAP-.git -b gh-pages"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

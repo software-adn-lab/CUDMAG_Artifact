@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 const repoName = 'Detection-Mapping-of-Antipatterns-DMAP-';
 
 export default defineConfig(({ mode }) => ({
-  base: `/${repoName}/`,
+  base: mode === 'production' ? `/${repoName}/` : '/',
   server: {
     host: "::",
     port: 8080,
@@ -21,4 +21,8 @@ export default defineConfig(({ mode }) => ({
     },
   },
   publicDir: 'public',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  }
 }));
