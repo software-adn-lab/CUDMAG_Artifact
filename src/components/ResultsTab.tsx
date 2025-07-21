@@ -79,8 +79,8 @@ const exportToPDF = () => {
   yPosition += 15;
   
   pdf.setFontSize(12);
-  //pdf.text(`Fecha: ${new Date().toLocaleDateString('es-ES')}`, margin, yPosition);
-  //yPosition += 10;
+  pdf.text(`Fecha: ${new Date().toLocaleDateString('es-ES')}`, margin, yPosition);
+  yPosition += 10;
   
   pdf.text(`Antipatrones detectados: ${detectedAntipatterns.length}`, margin, yPosition);
   yPosition += 20;
