@@ -29,7 +29,7 @@ export const scrumTabs: TabData[] = [
     antipatterns: [
       {
         id: 'reporte-estatus',
-        name: 'Reporte de estatus',
+        name: 'Status report',
         questions: [
           { id: 'reporte-estatus-q1', text: '¿Se usa un formato estructurado (como las 3 preguntas u otro similar) para guiar la reunión?' },
           { id: 'reporte-estatus-q2', text: '¿Se indica que la Daily Scrum se centra en informar avances a una persona específica?' },
@@ -39,7 +39,7 @@ export const scrumTabs: TabData[] = [
       },
       {
         id: 'sin-rutina',
-        name: 'Sin rutina',
+        name: 'No routine',
         questions: [
           { id: 'sin-rutina-q1', text: '¿La reunión ocurre siempre en el mismo lugar o plataforma y con un horario definido?' },
           { id: 'sin-rutina-q2', text: '¿La reunión suele omitirse en algunas ocasiones?' },
@@ -49,7 +49,7 @@ export const scrumTabs: TabData[] = [
       },
       {
         id: 'limite-tiempo',
-        name: 'No cumplir el límite de tiempo',
+        name: 'Not enforcing the time-box',
         questions: [
           { id: 'limite-tiempo-q1', text: '¿La reunión suele durar más de 15 minutos?' },
           { id: 'limite-tiempo-q2', text: '¿Se menciona que la reunión ha llegado a extenderse por discusiones o problemas?' },
@@ -65,7 +65,7 @@ export const scrumTabs: TabData[] = [
     antipatterns: [
       {
         id: 'gran-tamano',
-        name: 'Product Backlog de gran tamaño',
+        name: 'Over-sized',
         questions: [
           { id: 'gran-tamano-q1', text: '¿El Backlog tiene una gran cantidad de elementos planificados a largo plazo?' },
           { id: 'gran-tamano-q2', text: '¿El equipo refina elementos que luego no se desarrollan?' },
@@ -75,7 +75,7 @@ export const scrumTabs: TabData[] = [
       },
       {
         id: 'problemas-obsoletos',
-        name: 'Problemas obsoletos',
+        name: 'Outdated issues',
         questions: [
           { id: 'problemas-obsoletos-q1', text: '¿Existen elementos en el Backlog que permanecen mucho tiempo sin ser discutidos?' },
           { id: 'problemas-obsoletos-q2', text: '¿El Product Backlog se revisa regularmente durante el Sprint?' },
@@ -85,7 +85,7 @@ export const scrumTabs: TabData[] = [
       },
       {
         id: '100-avance',
-        name: '100% en avance',
+        name: '100% in advance',
         questions: [
           { id: '100-avance-q1', text: '¿El Backlog abarca casi en su totalidad el proyecto desde un inicio?' },
           { id: '100-avance-q2', text: '¿El Backlog permanece sin cambios durante gran parte del proyecto?' },
@@ -101,7 +101,7 @@ export const scrumTabs: TabData[] = [
     antipatterns: [
       {
         id: 'planeacion-detallada',
-        name: 'Planeación demasiado detallada',
+        name: 'Planning too detailed',
         questions: [
           { id: 'planeacion-detallada-q1', text: '¿El equipo planifica todas las tareas del Sprint como un avance?' },
           { id: 'planeacion-detallada-q2', text: '¿El equipo evita realizar cambios en las tareas planificadas?' },
@@ -111,7 +111,7 @@ export const scrumTabs: TabData[] = [
       },
       {
         id: 'poca-planificacion',
-        name: 'Muy poca planificación',
+        name: 'Too little planning',
         questions: [
           { id: 'poca-planificacion-q1', text: '¿El equipo se ha saltado la planificación por completo en alguna ocasión?' },
           { id: 'poca-planificacion-q2', text: '¿Existe algún criterio para seleccionar los elementos del backlog?' },
@@ -121,7 +121,7 @@ export const scrumTabs: TabData[] = [
       },
       {
         id: 'sin-objetivo',
-        name: 'Sin objetivo de negocio, sin meta de Sprint, solo cosas aleatorias',
+        name: 'No business objective, no Sprint Goal, just random stuff',
         questions: [
           { id: 'sin-objetivo-q1', text: '¿Las tareas del Sprint tienen un propósito en común?' },
           { id: 'sin-objetivo-q2', text: '¿El equipo define una meta clara para el Sprint antes de iniciar el trabajo?' },
@@ -131,7 +131,7 @@ export const scrumTabs: TabData[] = [
       },
       {
         id: 'asuntos-pendientes',
-        name: 'Asuntos pendientes',
+        name: 'Unfinished business',
         questions: [
           { id: 'asuntos-pendientes-q1', text: '¿Se han trasladado tareas o historias incompletas de un Sprint al siguiente?' },
           { id: 'asuntos-pendientes-q2', text: '¿Se ajusta la definición o prioridad de una tarea o historia si no se completa en el Sprint anterior?' },
@@ -147,7 +147,7 @@ export const scrumTabs: TabData[] = [
     antipatterns: [
       {
         id: 'no-entregar-meta',
-        name: 'No entregar la meta del Sprint',
+        name: 'Not delivering the Sprint Goal',
         questions: [
           { id: 'no-entregar-meta-q1', text: '¿El equipo ha incumplido la meta del Sprint en alguna ocasión?' },
           { id: 'no-entregar-meta-q2', text: '¿Se han identificado factores internos o externos que afecten al desarrollo del Sprint?' },
@@ -173,7 +173,7 @@ export const scrumTabs: TabData[] = [
       },
       {
         id: 'muerte-powerpoint',
-        name: 'Muerte por PowerPoint',
+        name: 'Death by PowerPoint',
         questions: [
           { id: 'muerte-powerpoint-q1', text: '¿El Sprint Review se describe como una exposición?' },
           { id: 'muerte-powerpoint-q2', text: '¿La retroalimentación del Sprint Review ayuda a adaptar y mejorar el Backlog?' },
@@ -199,7 +199,7 @@ export const scrumTabs: TabData[] = [
       },
       {
         id: 'no-documentacion',
-        name: '#No documentación',
+        name: '#NoDocumentation',
         questions: [
           { id: 'no-documentacion-q1', text: '¿Existe documentación que contenga lo discutido en el Retrospective?' },
           { id: 'no-documentacion-q2', text: '¿Existe alguien designado para tomar notas u otro tipo de evidencia del Retrospective?' },
