@@ -33,7 +33,7 @@ export const AntipatternCard = ({
   const isAntipatternDetected = () => {
     const userAnswers = antipattern.questions.map(q => answers[q.id]);
     if (userAnswers.some(answer => answer === null || answer === undefined)) {
-      return null; // No se puede determinar
+      return null; // Cannot determine
     }
     return JSON.stringify(userAnswers) === JSON.stringify(antipattern.expectedAnswers);
   };
@@ -44,7 +44,7 @@ export const AntipatternCard = ({
       return (
         <Badge variant="secondary" className="flex items-center gap-1">
           <AlertCircle className="w-3 h-3" />
-          Incompleto
+          Incomplete
         </Badge>
       );
     }
@@ -52,14 +52,14 @@ export const AntipatternCard = ({
       return (
         <Badge variant="destructive" className="flex items-center gap-1">
           <XCircle className="w-3 h-3" />
-          Antipatrón detectado
+          Antipattern detected
         </Badge>
       );
     }
     return (
       <Badge variant="default" className="flex items-center gap-1 bg-success hover:bg-success/90">
         <CheckCircle className="w-3 h-3" />
-        No ocurre
+        Not present
       </Badge>
     );
   };
@@ -89,7 +89,7 @@ export const AntipatternCard = ({
                   onClick={() => onAnswerChange(question.id, true)}
                   className="min-w-[60px]"
                 >
-                  Sí
+                  Yes
                 </Button>
                 <Button
                   variant={answers[question.id] === false ? "default" : "outline"}
@@ -105,25 +105,25 @@ export const AntipatternCard = ({
                   onClick={() => onAnswerChange(question.id, null)}
                   className="min-w-[80px]"
                 >
-                  Omitir
+                  Skip
                 </Button>
               </div>
               
-              <Button
+                <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => toggleComment(question.id)}
                 className="flex items-center gap-1 text-muted-foreground hover:text-foreground"
               >
                 <MessageSquare className="w-4 h-4" />
-                Comentario
+                Comment
               </Button>
             </div>
 
             {showComments[question.id] && (
               <div className="mt-3">
                 <Textarea
-                  placeholder="Agrega un comentario opcional..."
+                  placeholder="Add an optional comment..."
                   value={comments[question.id] || ''}
                   onChange={(e) => onCommentChange(question.id, e.target.value)}
                   className="min-h-[80px] resize-none"

@@ -29,7 +29,7 @@ scrumTabs.forEach(tab => {
     const hasAllAnswers = userAnswers.every(answer => answer !== null && answer !== undefined);
 
     if (hasAllAnswers && JSON.stringify(userAnswers) === JSON.stringify(antipattern.expectedAnswers)) {
-      // 🔽 unir comentarios no vacíos
+      // 🔽 join non-empty comments
       const combinedComment = antipattern.questions
         .map(q => comments[q.id])
         .filter(Boolean) // solo los que no estén vacíos
@@ -52,10 +52,10 @@ scrumTabs.forEach(tab => {
 
   const getRelationshipBadge = (strength: string) => {
     const variants = {
-  'N': { label: 'N: Sin vinculación', variant: 'secondary' as const },
-  'P': { label: 'P: Vinculación débil', variant: 'outline' as const },
-  'L': { label: 'L: Vinculación moderada', variant: 'default' as const },
-  'F': { label: 'F: Vinculación fuerte', variant: 'destructive' as const }
+  'N': { label: 'N: Not linked', variant: 'secondary' as const },
+  'P': { label: 'P: Weak relationship', variant: 'outline' as const },
+  'L': { label: 'L: Moderate relationship', variant: 'default' as const },
+  'F': { label: 'F: Strong relationship', variant: 'destructive' as const }
 };
 
     
@@ -74,18 +74,18 @@ const exportToPDF = () => {
   pdf.setFont('helvetica', 'bold');
   pdf.setFontSize(18);
   
-  // Título
-  pdf.text('Evaluación de Antipatrones Scrum', margin, yPosition);
+  // Title
+  pdf.text('Scrum Antipatterns Evaluation', margin, yPosition);
   yPosition += 15;
   
   pdf.setFontSize(12);
-  pdf.text(`Fecha: ${new Date().toLocaleDateString('es-ES')}`, margin, yPosition);
+  pdf.text(`Date: ${new Date().toLocaleDateString('en-GB')}`, margin, yPosition);
   yPosition += 10;
   
-  pdf.text(`Antipatrones detectados: ${detectedAntipatterns.length}`, margin, yPosition);
+  pdf.text(`Detected antipatterns: ${detectedAntipatterns.length}`, margin, yPosition);
   yPosition += 20;
 
-  // Antipatrones detectados
+  // Detected antipatterns
   detectedAntipatterns.forEach((antipattern, index) => {
     if (yPosition > 250) {
       pdf.addPage();
@@ -102,9 +102,9 @@ const exportToPDF = () => {
     pdf.text(`Categoría: ${antipattern.tabName}`, margin + 5, yPosition);
     yPosition += 12;
 
-    pdf.setFont('helvetica', 'bold');
-    pdf.setFontSize(11);
-    pdf.text('Antipatrones de Gestión Relacionados:', margin + 5, yPosition);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(11);
+  pdf.text('Related management antipatterns:', margin + 5, yPosition);
     yPosition += 8;
 
     antipattern.managementAntipatterns.forEach((mgmt, mgmtIndex) => {
@@ -116,12 +116,12 @@ const exportToPDF = () => {
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       
-      const strengthLabels = {
-        'N': 'No vinculado',
-        'P': 'Vinculación débil', 
-        'L': 'Vinculación moderada',
-        'F': 'Vinculación fuerte'
-      };
+          const strengthLabels = {
+            'N': 'Not linked',
+            'P': 'Weak relationship', 
+            'L': 'Moderate relationship',
+            'F': 'Strong relationship'
+          };
       
       pdf.text(`• ${mgmt.name} (${strengthLabels[mgmt.relationshipStrength as keyof typeof strengthLabels]})`, margin + 10, yPosition);
       yPosition += 6;
@@ -141,16 +141,16 @@ const exportToPDF = () => {
       yPosition += 3;
     });
 
-    // Comentario del evaluador (nuevo bloque)
+      // Evaluator comment (new block)
     if (antipattern.comment) {
       if (yPosition > 260) {
         pdf.addPage();
         yPosition = margin;
       }
 
-      pdf.setFont('helvetica', 'italic');
-      pdf.setFontSize(10);
-      pdf.text('Comentario(s) del evaluador:', margin + 5, yPosition);
+  pdf.setFont('helvetica', 'italic');
+  pdf.setFontSize(10);
+  pdf.text('Evaluator comment(s):', margin + 5, yPosition);
       yPosition += 6;
 
       pdf.setFont('helvetica', 'normal');
@@ -171,7 +171,7 @@ const exportToPDF = () => {
     yPosition += 10;
   });
 
-  pdf.save(`antipatrones-scrum-${new Date().toISOString().split('T')[0]}.pdf`);
+  pdf.save(`scrum-antipatterns-${new Date().toISOString().split('T')[0]}.pdf`);
 };
 
 
@@ -181,10 +181,10 @@ const exportToPDF = () => {
         <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mb-4">
           <FileText className="w-8 h-8 text-success" />
         </div>
-        <h3 className="text-xl font-semibold mb-2">¡Excelente trabajo!</h3>
+        <h3 className="text-xl font-semibold mb-2">Great job!</h3>
         <p className="text-muted-foreground max-w-md">
-          No se han detectado antipatrones de Scrum basados en las respuestas proporcionadas. 
-          Tu equipo parece estar siguiendo buenas prácticas ágiles.
+          No Scrum antipatterns were detected based on the provided answers.
+          Your team appears to be following good agile practices.
         </p>
       </div>
     );
@@ -194,16 +194,16 @@ const exportToPDF = () => {
   <div className="space-y-6">
     <div className="flex justify-between items-center">
       <div>
-        <h2 className="text-2xl font-bold">Antipatrones Detectados</h2>
+        <h2 className="text-2xl font-bold">Detected Antipatterns</h2>
         <p className="text-muted-foreground mt-1">
-          Se detectaron {detectedAntipatterns.length} antipatrones en tu evaluación
+          {detectedAntipatterns.length} antipatterns were detected in your assessment
         </p>
       </div>
 
       <div className="flex gap-2">
         <Button onClick={exportToPDF} variant="outline" size="sm">
           <FileText className="w-4 h-4 mr-2" />
-          Exportar PDF
+          Export PDF
         </Button>
       </div>
     </div>
@@ -218,7 +218,7 @@ const exportToPDF = () => {
                   {detected.antipatternName}
                 </CardTitle>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Categoría: {detected.tabName}
+                  Category: {detected.tabName}
                 </p>
               </div>
             </div>
@@ -227,7 +227,7 @@ const exportToPDF = () => {
           <CardContent>
             <div className="space-y-4">
               <h4 className="font-semibold text-foreground">
-                Antipatrones de Gestión Relacionados:
+                Related management antipatterns:
               </h4>
 
               {detected.managementAntipatterns.map((mgmt, mgmtIndex) => (
@@ -244,7 +244,7 @@ const exportToPDF = () => {
 
               {detected.comment && (
                 <div className="bg-muted/20 p-3 rounded-md mt-4">
-                  <p className="text-sm font-semibold mb-1 text-foreground">Comentario(s) del evaluador:</p>
+                  <p className="text-sm font-semibold mb-1 text-foreground">Evaluator comment(s):</p>
                   <p className="text-sm text-muted-foreground whitespace-pre-line">
                     {detected.comment}
                   </p>

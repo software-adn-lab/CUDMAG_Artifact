@@ -82,7 +82,7 @@ const Index = () => {
       return (
         <Badge variant="secondary" className="flex items-center gap-1">
           <AlertTriangle className="w-3 h-3" />
-          Incompleto
+          Incomplete
         </Badge>
       );
     }
@@ -90,14 +90,14 @@ const Index = () => {
       return (
         <Badge variant="destructive" className="flex items-center gap-1">
           <Target className="w-3 h-3" />
-          Antipatrón detectado
+          Antipattern detected
         </Badge>
       );
     }
     return (
       <Badge variant="default" className="flex items-center gap-1 bg-success hover:bg-success/90">
         <CheckCircle className="w-3 h-3" />
-        No ocurre
+        Not present
       </Badge>
     );
   };
@@ -112,18 +112,18 @@ const Index = () => {
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold text-foreground">Detection & Mapping of Antipatterns (DMAP)</h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Identifica antipatrones potenciales en tu implementación de Scrum y descubre su relación con problemas más amplios de gestión de proyectos.
+              Identify potential antipatterns in your Scrum implementation and discover their relation to broader project management issues.
             </p>
           </div>
           
           <div className="mt-8 max-w-md mx-auto space-y-2">
             <div className="flex justify-between items-center text-sm">
-              <span className="font-medium">Progreso de la evaluación</span>
-              <span>{progress}% Completado</span>
+              <span className="font-medium">Evaluation progress</span>
+              <span>{progress}% Completed</span>
             </div>
             <Progress value={progress} className="h-2" />
             <div className="text-center text-sm text-muted-foreground">
-              {Object.values(answers).filter(a => a !== null && a !== undefined).length} de {scrumTabs.reduce((sum, tab) => sum + tab.antipatterns.reduce((antiSum, anti) => antiSum + anti.questions.length, 0), 0)} preguntas respondidas
+              {Object.values(answers).filter(a => a !== null && a !== undefined).length} of {scrumTabs.reduce((sum, tab) => sum + tab.antipatterns.reduce((antiSum, anti) => antiSum + anti.questions.length, 0), 0)} questions answered
             </div>
           </div>
           
@@ -131,7 +131,7 @@ const Index = () => {
             <div className="mt-6 text-center">
               <Badge variant="secondary" className="flex items-center gap-1 mx-auto w-fit">
                 <AlertTriangle className="w-4 h-4" />
-                {detectedCount} antipatrones detectados
+                {detectedCount} detected antipatterns
               </Badge>
             </div>
           )}
@@ -146,7 +146,7 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-lg flex items-center gap-2">
                   <Users2 className="w-5 h-5" />
-                  Etapas Scrum
+                  Scrum Stages
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
@@ -167,7 +167,7 @@ const Index = () => {
                         <div className="flex-1">
                           <div className="font-medium text-sm">{tab.name}</div>
                           <div className="text-xs opacity-75 mt-1">
-                            {stats.answered}/{stats.total} respondidas
+                            {stats.answered}/{stats.total} answered
                           </div>
                         </div>
                         <div className="text-xs">
@@ -187,8 +187,8 @@ const Index = () => {
                         : 'hover:bg-success/10 text-success hover:text-success/80 border border-success/20'
                     }`}
                   >
-                    <div className="font-medium text-sm">Antipatrones detectados</div>
-                    <div className="text-xs opacity-75 mt-1">Ver resultados</div>
+          <div className="font-medium text-sm">Detected antipatterns</div>
+        <div className="text-xs opacity-75 mt-1">View results</div>
                   </button>
                 )}
               </CardContent>
@@ -208,7 +208,7 @@ const Index = () => {
                       <div>
                         <CardTitle className="text-xl">{currentTab.name}</CardTitle>
                         <p className="text-muted-foreground mt-1">
-                          Revisa {currentTab.antipatterns.length} antipatrones potenciales en esta etapa de tu proceso Scrum.
+                          Review {currentTab.antipatterns.length} potential antipatterns in this stage of your Scrum process.
                         </p>
                       </div>
                     </div>
@@ -246,7 +246,7 @@ const Index = () => {
                                   onClick={() => handleAnswerChange(question.id, true)}
                                   className="min-w-[60px]"
                                 >
-                                  Sí
+                                  Yes
                                 </Button>
                                 <Button
                                   variant={answers[question.id] === false ? "default" : "outline"}
@@ -258,21 +258,21 @@ const Index = () => {
                                 </Button>
                               </div>
                               
-                              <Button
+                                <Button
                                 variant="ghost"
                                 size="sm"
                                 onClick={() => toggleComment(question.id)}
                                 className="flex items-center gap-1 text-muted-foreground hover:text-foreground"
                               >
                                 <MessageSquare className="w-4 h-4" />
-                                Agregar comentario
+                                Add comment
                               </Button>
                             </div>
 
                             {showComments[question.id] && (
                               <div>
                                 <Textarea
-                                  placeholder="Agrega un comentario opcional..."
+                                  placeholder="Add an optional comment..."
                                   value={comments[question.id] || ''}
                                   onChange={(e) => handleCommentChange(question.id, e.target.value)}
                                   className="min-h-[80px] resize-none"

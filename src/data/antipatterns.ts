@@ -31,9 +31,9 @@ export const scrumTabs: TabData[] = [
         id: 'reporte-estatus',
         name: 'Status report',
         questions: [
-          { id: 'reporte-estatus-q1', text: '¿Se usa un formato estructurado (como las 3 preguntas u otro similar) para guiar la reunión?' },
-          { id: 'reporte-estatus-q2', text: '¿Se indica que la Daily Scrum se centra en informar avances a una persona específica?' },
-          { id: 'reporte-estatus-q3', text: '¿Las actualizaciones en la reunión son repetitivas o predecibles?' }
+          { id: 'reporte-estatus-q1', text: 'Is a structured format (for example the three questions or similar) used to guide the meeting?' },
+          { id: 'reporte-estatus-q2', text: 'Is the Daily Scrum presented as a status update to a specific person?' },
+          { id: 'reporte-estatus-q3', text: 'Are the updates in the meeting repetitive or predictable?' }
         ],
         expectedAnswers: [true, true, true]
       },
@@ -41,9 +41,9 @@ export const scrumTabs: TabData[] = [
         id: 'sin-rutina',
         name: 'No routine',
         questions: [
-          { id: 'sin-rutina-q1', text: '¿La reunión ocurre siempre en el mismo lugar o plataforma y con un horario definido?' },
-          { id: 'sin-rutina-q2', text: '¿La reunión suele omitirse en algunas ocasiones?' },
-          { id: 'sin-rutina-q3', text: '¿La estructura de la reunión está definida por pasos o turnos?' }
+          { id: 'sin-rutina-q1', text: 'Does the meeting always happen on the same platform or place and at a defined time?' },
+          { id: 'sin-rutina-q2', text: 'Is the meeting sometimes skipped?' },
+          { id: 'sin-rutina-q3', text: 'Is the meeting structure defined by steps or speaking turns?' }
         ],
         expectedAnswers: [false, true, true]
       },
@@ -51,9 +51,9 @@ export const scrumTabs: TabData[] = [
         id: 'limite-tiempo',
         name: 'Not enforcing the time-box',
         questions: [
-          { id: 'limite-tiempo-q1', text: '¿La reunión suele durar más de 15 minutos?' },
-          { id: 'limite-tiempo-q2', text: '¿Se menciona que la reunión ha llegado a extenderse por discusiones o problemas?' },
-          { id: 'limite-tiempo-q3', text: '¿Se omite cualquier mención al objetivo del Sprint en la descripción de la reunión?' }
+          { id: 'limite-tiempo-q1', text: 'Does the meeting usually last more than 15 minutes?' },
+          { id: 'limite-tiempo-q2', text: 'Is it mentioned that the meeting often extends due to discussions or issues?' },
+          { id: 'limite-tiempo-q3', text: 'Is any reference to the Sprint Goal omitted when describing the meeting?' }
         ],
         expectedAnswers: [true, true, true]
       }
@@ -67,9 +67,9 @@ export const scrumTabs: TabData[] = [
         id: 'gran-tamano',
         name: 'Over-sized',
         questions: [
-          { id: 'gran-tamano-q1', text: '¿El Backlog tiene una gran cantidad de elementos planificados a largo plazo?' },
-          { id: 'gran-tamano-q2', text: '¿El equipo refina elementos que luego no se desarrollan?' },
-          { id: 'gran-tamano-q3', text: '¿El equipo evita eliminar elementos del Backlog?' }
+          { id: 'gran-tamano-q1', text: 'Does the Backlog contain a large number of long-term planned items?' },
+          { id: 'gran-tamano-q2', text: 'Does the team refine items that are later not implemented?' },
+          { id: 'gran-tamano-q3', text: 'Does the team avoid removing items from the Backlog?' }
         ],
         expectedAnswers: [true, true, true]
       },
@@ -77,9 +77,9 @@ export const scrumTabs: TabData[] = [
         id: 'problemas-obsoletos',
         name: 'Outdated issues',
         questions: [
-          { id: 'problemas-obsoletos-q1', text: '¿Existen elementos en el Backlog que permanecen mucho tiempo sin ser discutidos?' },
-          { id: 'problemas-obsoletos-q2', text: '¿El Product Backlog se revisa regularmente durante el Sprint?' },
-          { id: 'problemas-obsoletos-q3', text: '¿Existen elementos del Backlog que dejaron de ser útiles debido a cambios en el proyecto?' }
+          { id: 'problemas-obsoletos-q1', text: 'Are there Backlog items that have remained undiscussed for a long time?' },
+          { id: 'problemas-obsoletos-q2', text: 'Is the Product Backlog reviewed regularly during the Sprint?' },
+          { id: 'problemas-obsoletos-q3', text: 'Are there Backlog items that are no longer useful due to project changes?' }
         ],
         expectedAnswers: [true, false, true]
       },
@@ -87,9 +87,9 @@ export const scrumTabs: TabData[] = [
         id: '100-avance',
         name: '100% in advance',
         questions: [
-          { id: '100-avance-q1', text: '¿El Backlog abarca casi en su totalidad el proyecto desde un inicio?' },
-          { id: '100-avance-q2', text: '¿El Backlog permanece sin cambios durante gran parte del proyecto?' },
-          { id: '100-avance-q3', text: '¿El equipo realiza adaptaciones en el Backlog?' }
+          { id: '100-avance-q1', text: 'Does the Backlog cover almost the entire project from the start?' },
+          { id: '100-avance-q2', text: 'Does the Backlog remain unchanged for most of the project?' },
+          { id: '100-avance-q3', text: 'Does the team make adaptations to the Backlog?' }
         ],
         expectedAnswers: [true, true, false]
       }
@@ -103,9 +103,9 @@ export const scrumTabs: TabData[] = [
         id: 'planeacion-detallada',
         name: 'Planning too detailed',
         questions: [
-          { id: 'planeacion-detallada-q1', text: '¿El equipo planifica todas las tareas del Sprint como un avance?' },
-          { id: 'planeacion-detallada-q2', text: '¿El equipo evita realizar cambios en las tareas planificadas?' },
-          { id: 'planeacion-detallada-q3', text: '¿Los elementos del Backlog rara vez cambian o emergen a lo largo del Sprint?' }
+          { id: 'planeacion-detallada-q1', text: 'Does the team plan every single Sprint task in advance?' },
+          { id: 'planeacion-detallada-q2', text: 'Does the team avoid making changes to planned tasks?' },
+          { id: 'planeacion-detallada-q3', text: 'Do Backlog items rarely change or emerge during the Sprint?' }
         ],
         expectedAnswers: [true, true, true]
       },
@@ -113,9 +113,9 @@ export const scrumTabs: TabData[] = [
         id: 'poca-planificacion',
         name: 'Too little planning',
         questions: [
-          { id: 'poca-planificacion-q1', text: '¿El equipo se ha saltado la planificación por completo en alguna ocasión?' },
-          { id: 'poca-planificacion-q2', text: '¿Existe algún criterio para seleccionar los elementos del backlog?' },
-          { id: 'poca-planificacion-q3', text: '¿El equipo inicia el Sprint sin discutir cómo abordarán el trabajo?' }
+          { id: 'poca-planificacion-q1', text: 'Has the team ever skipped planning completely?' },
+          { id: 'poca-planificacion-q2', text: 'Is there a clear criterion to select Backlog items?' },
+          { id: 'poca-planificacion-q3', text: 'Does the team start the Sprint without discussing how they will approach the work?' }
         ],
         expectedAnswers: [true, false, true]
       },
@@ -123,9 +123,9 @@ export const scrumTabs: TabData[] = [
         id: 'sin-objetivo',
         name: 'No business objective, no Sprint Goal, just random stuff',
         questions: [
-          { id: 'sin-objetivo-q1', text: '¿Las tareas del Sprint tienen un propósito en común?' },
-          { id: 'sin-objetivo-q2', text: '¿El equipo define una meta clara para el Sprint antes de iniciar el trabajo?' },
-          { id: 'sin-objetivo-q3', text: '¿Existe una justificación documentada de por qué las tareas fueron incluidas en el Sprint?' }
+          { id: 'sin-objetivo-q1', text: 'Do Sprint tasks share a common purpose?' },
+          { id: 'sin-objetivo-q2', text: 'Does the team define a clear Sprint Goal before starting the work?' },
+          { id: 'sin-objetivo-q3', text: 'Is there documented justification for why tasks were included in the Sprint?' }
         ],
         expectedAnswers: [false, false, false]
       },
@@ -133,9 +133,9 @@ export const scrumTabs: TabData[] = [
         id: 'asuntos-pendientes',
         name: 'Unfinished business',
         questions: [
-          { id: 'asuntos-pendientes-q1', text: '¿Se han trasladado tareas o historias incompletas de un Sprint al siguiente?' },
-          { id: 'asuntos-pendientes-q2', text: '¿Se ajusta la definición o prioridad de una tarea o historia si no se completa en el Sprint anterior?' },
-          { id: 'asuntos-pendientes-q3', text: '¿Se documentan las razones por las que una tarea o historia no fue completada en un Sprint?' }
+          { id: 'asuntos-pendientes-q1', text: 'Are incomplete tasks or stories carried over to the next Sprint?' },
+          { id: 'asuntos-pendientes-q2', text: 'Is the definition or priority of a task/story adjusted if it was not completed in the previous Sprint?' },
+          { id: 'asuntos-pendientes-q3', text: 'Are reasons documented for why a task/story was not completed in a Sprint?' }
         ],
         expectedAnswers: [true, false, false]
       }
@@ -149,9 +149,9 @@ export const scrumTabs: TabData[] = [
         id: 'no-entregar-meta',
         name: 'Not delivering the Sprint Goal',
         questions: [
-          { id: 'no-entregar-meta-q1', text: '¿El equipo ha incumplido la meta del Sprint en alguna ocasión?' },
-          { id: 'no-entregar-meta-q2', text: '¿Se han identificado factores internos o externos que afecten al desarrollo del Sprint?' },
-          { id: 'no-entregar-meta-q3', text: '¿Se establecen criterios claros para considerar que se logró la meta del Sprint?' }
+          { id: 'no-entregar-meta-q1', text: 'Has the team ever failed to achieve the Sprint Goal?' },
+          { id: 'no-entregar-meta-q2', text: 'Have internal or external factors been identified that affect Sprint execution?' },
+          { id: 'no-entregar-meta-q3', text: 'Are clear criteria set to determine whether the Sprint Goal was achieved?' }
         ],
         expectedAnswers: [true, true, false]
       }
@@ -165,9 +165,9 @@ export const scrumTabs: TabData[] = [
         id: 'no-sprint-review',
         name: 'No Sprint Review',
         questions: [
-          { id: 'no-sprint-review-q1', text: '¿El equipo en alguna ocasión ha omitido el Sprint Review?' },
-          { id: 'no-sprint-review-q2', text: '¿El Sprint Review se omite si no se completó todo el trabajo planeado?' },
-          { id: 'no-sprint-review-q3', text: '¿Se generan acciones o decisiones a partir del Sprint Review?' }
+          { id: 'no-sprint-review-q1', text: 'Has the team ever skipped the Sprint Review?' },
+          { id: 'no-sprint-review-q2', text: 'Is the Sprint Review skipped if not all planned work was completed?' },
+          { id: 'no-sprint-review-q3', text: 'Are actions or decisions generated from the Sprint Review?' }
         ],
         expectedAnswers: [true, true, false]
       },
@@ -175,9 +175,9 @@ export const scrumTabs: TabData[] = [
         id: 'muerte-powerpoint',
         name: 'Death by PowerPoint',
         questions: [
-          { id: 'muerte-powerpoint-q1', text: '¿El Sprint Review se describe como una exposición?' },
-          { id: 'muerte-powerpoint-q2', text: '¿La retroalimentación del Sprint Review ayuda a adaptar y mejorar el Backlog?' },
-          { id: 'muerte-powerpoint-q3', text: '¿Se menciona que las personas externas al equipo participaron activamente durante el Sprint Review?' }
+          { id: 'muerte-powerpoint-q1', text: 'Is the Sprint Review described as a presentation?' },
+          { id: 'muerte-powerpoint-q2', text: 'Does feedback from the Sprint Review help adapt and improve the Backlog?' },
+          { id: 'muerte-powerpoint-q3', text: 'Is it mentioned that people outside the team actively participated during the Sprint Review?' }
         ],
         expectedAnswers: [true, false, false]
       }
@@ -191,9 +191,9 @@ export const scrumTabs: TabData[] = [
         id: 'no-retro',
         name: '#NoRetro',
         questions: [
-          { id: 'no-retro-q1', text: '¿El equipo en alguna ocasión ha omitido el Sprint Retrospective?' },
-          { id: 'no-retro-q2', text: '¿En la Retrospective se identifican acciones de mejora?' },
-          { id: 'no-retro-q3', text: '¿La Retrospective se centra en validar prácticas actuales sin proponer cambios?' }
+          { id: 'no-retro-q1', text: 'Has the team ever skipped the Sprint Retrospective?' },
+          { id: 'no-retro-q2', text: 'Are improvement actions identified during the Retrospective?' },
+          { id: 'no-retro-q3', text: 'Does the Retrospective focus on validating current practices without proposing changes?' }
         ],
         expectedAnswers: [true, false, true]
       },
@@ -201,9 +201,9 @@ export const scrumTabs: TabData[] = [
         id: 'no-documentacion',
         name: '#NoDocumentation',
         questions: [
-          { id: 'no-documentacion-q1', text: '¿Existe documentación que contenga lo discutido en el Retrospective?' },
-          { id: 'no-documentacion-q2', text: '¿Existe alguien designado para tomar notas u otro tipo de evidencia del Retrospective?' },
-          { id: 'no-documentacion-q3', text: '¿Se indica dónde queda registrada la información de la Retrospective?' }
+          { id: 'no-documentacion-q1', text: 'Is there documentation that contains what was discussed in the Retrospective?' },
+          { id: 'no-documentacion-q2', text: 'Is someone assigned to take notes or other evidence during the Retrospective?' },
+          { id: 'no-documentacion-q3', text: 'Is it indicated where Retrospective information is recorded?' }
         ],
         expectedAnswers: [false, false, false]
       }
@@ -260,14 +260,14 @@ export const managementMappings: Record<string, ManagementAntipattern[]> = {
   '100-avance': [
     {
       name: 'Inflexible Plan',
-      justification: 'Formalizar todo el backlog desde el inicio genera falta de adaptabilidad, como un plan rígido.',
+  justification: 'Formalizing the entire backlog from the start causes lack of adaptability, like a rigid plan.',
       relationshipStrength: 'F'
     }
   ],
   'planeacion-detallada': [
     {
       name: 'Inflexible Plan',
-      justification: 'Detallar todo al inicio impide adaptación, tal como un plan que no se flexibiliza según el contexto.',
+  justification: 'Detailing everything at the beginning prevents adaptation, like a plan that is not flexible to context.',
       relationshipStrength: 'F'
     }
   ],
@@ -298,62 +298,62 @@ export const managementMappings: Record<string, ManagementAntipattern[]> = {
     },
     {
       name: 'Project Mismanagement',
-      justification: 'La acumulación de trabajo afirma una gestión deficiente, como un proyecto que no se controla adecuadamente.',
+  justification: 'The accumulation of work indicates poor management, as a project that is not properly controlled.',
       relationshipStrength: 'L'
     }
   ],
   'no-entregar-meta': [
     {
       name: 'Fire Drill',
-      justification: 'El no poder entregar el Sprint refleja una gestión reactiva y ausencia de seguimiento.',
+  justification: 'Failure to deliver the Sprint reflects reactive management and lack of follow-up.',
       relationshipStrength: 'F'
     },
     {
       name: 'Project Mismanagement',
-      justification: 'El no poder entregar el Sprint implica que no se está gestionando adecuadamente el proyecto',
+  justification: 'Not being able to deliver the Sprint implies the project is not being managed properly.',
       relationshipStrength: 'F'
     }
   ],
   'no-sprint-review': [
     {
       name: 'Glass Case Plan',
-      justification: 'Omitir la revisión impide el generar un plan útil y efectivo.',
+  justification: 'Skipping the review prevents generating a useful and effective plan.',
       relationshipStrength: 'P'
     },
     {
       name: 'Road to Nowhere',
-      justification: 'Omitir la revisión impide el seguimiento y ajuste de rumbo.',
+  justification: 'Skipping the review prevents monitoring and course adjustment.',
       relationshipStrength: 'P'
     }
   ],
   'muerte-powerpoint': [
     {
       name: 'Project Mismanagement',
-      justification: 'Una revisión sin validación ni interacción imposibilita la evaluación del producto.',
+  justification: 'A review without validation or interaction makes it impossible to properly evaluate the product.',
       relationshipStrength: 'P'
     }
   ],
   'no-retro': [
     {
       name: 'Glass Case Plan',
-      justification: 'La falta de análisis del proceso y mejora continua es equivalente a no actualizar los planes.',
+  justification: 'Lack of process analysis and continuous improvement is equivalent to not updating plans.',
       relationshipStrength: 'L'
     },
     {
       name: 'Road to Nowhere',
-      justification: 'La falta de análisis del proceso y mejora continua provoca descontrol y falta de dirección.',
+  justification: 'Lack of process analysis and continuous improvement causes disorder and lack of direction.',
       relationshipStrength: 'L'
     }
   ],
   'no-documentacion': [
     {
       name: 'Glass Case Plan',
-      justification: 'La falta de documentación impide que se genere un plan útil y efectivo.',
+  justification: 'Lack of documentation prevents creating a useful and effective plan.',
       relationshipStrength: 'P'
     },
     {
       name: 'Project Mismanagement',
-      justification: 'La falta de documentación impide seguimiento, evaluación y trazabilidad.',
+  justification: 'Lack of documentation prevents tracking, evaluation, and traceability.',
       relationshipStrength: 'P'
     }
   ]

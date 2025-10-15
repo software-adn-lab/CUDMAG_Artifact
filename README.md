@@ -1,3 +1,4 @@
+
 # 🧭 Detection & Mapping of Antipatterns (DMAP)
 
 **DMAP** is an interactive tool designed to help Scrum teams detect potential antipatterns in their agile practices and understand how these issues map to broader project management failures.
